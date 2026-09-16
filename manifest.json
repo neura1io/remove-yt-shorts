@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Remove YouTube Shorts",
+  "version": "1.0.0",
+  "description": "Hide Shorts shelves, videos, and navigation on YouTube. Open Shorts links in the regular video player.",
+  "minimum_chrome_version": "105",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://youtube.com/*", "https://m.youtube.com/*"],
+      "css": ["hide-shorts.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
